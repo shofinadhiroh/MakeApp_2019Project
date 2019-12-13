@@ -24,6 +24,39 @@
 </p>
 <br>
 
+## Development Environment
+
+**Testing Virtual Device**
+
+Pixel 2 API 27
+
+<p align="center">
+<img src= "" alt="AVD info" width="300">
+</p>
+
+**Android Environment**
+
+```
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.bismillah"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+```
+
 
 ## Collaborator
 
