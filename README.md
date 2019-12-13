@@ -24,14 +24,14 @@
 </p>
 <br>
 
-## Development Environment
+## > Development Environment
 
 **Testing Virtual Device**
 
-Pixel 2 API 27
+: Pixel 2 API 27
 
 <p align="center">
-<img src= "" alt="AVD info" width="300">
+<img src= "https://github.com/Chokyungsun/MakeApp_2019Project/blob/master/readme-rsc/AVD.png" alt="AVD info" width="900">
 </p>
 
 **Android Environment**
@@ -58,7 +58,7 @@ android {
 ```
 
 
-## Collaborator
+## > Collaborator
 
 :point_right: **[조경선](https://github.com/Chokyungsun)**
 
