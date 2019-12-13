@@ -36,7 +36,7 @@
 
 **Android Environment**
 
-```
+```java
 android {
     compileSdkVersion 28
     defaultConfig {
