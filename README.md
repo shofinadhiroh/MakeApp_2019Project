@@ -27,13 +27,13 @@
 
 ## Collaborator
 
-**[조경선](https://github.com/Chokyungsun)**
+:kr: **[조경선](https://github.com/Chokyungsun)**
 
-**[이종현]()**
+:kr: **[이종현]()**
 
-**[김준범]()**
+:kr: **[김준범]()**
 
-**[Shofiyyah Nadhiroh]()**
+:indonesia: **[Shofiyyah Nadhiroh]()**
 
-**[Malika Bounaga]()**
+:indonesia: **[Malika Bounaga]()**
 
