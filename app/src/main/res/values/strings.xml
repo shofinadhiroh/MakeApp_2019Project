@@ -1,0 +1,14 @@
+<!--
+  ~ Created by YSN Studio on 8/11/18 11:00 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 8/11/18 11:00 PM
+  -->
+
+<resources>
+    <string name="app_name">Example Square Camera</string>
+    <string name="image_view_stroke_take_picture">image view stroke take picture</string>
+    <string name="image_view_solid_take_picture">image view solid take picture</string>
+    <string name="image_view_take_picture">image view take picture</string>
+    <string name="image_view_item_photo">image view item photo</string>
+</resources>
