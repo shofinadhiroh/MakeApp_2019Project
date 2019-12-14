@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by YSN Studio on 8/11/18 11:00 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 8/11/18 11:00 PM
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TakePictureActivity">
+
+
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:keepScreenOn="true"
+        app:cameraFacing="front" />
+
+    <com.example.bismillah.OverlayView
+        android:id="@+id/overlay_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/linlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginLeft="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rellay_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_solid_take_picture"
+                        android:src="@drawable/bg_part" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_take_picture"
+                        android:src="@drawable/dataeye" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rellay_masc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_solid_take_picture"
+                        android:src="@drawable/bg_part" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_take_picture"
+                        android:src="@drawable/dataeye2" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rellay_lashes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_solid_take_picture"
+                        android:src="@drawable/bg_part" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_take_picture"
+                        android:src="@drawable/dataeye3" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rellay_lips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_solid_take_picture"
+                        android:src="@drawable/bg_part" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_take_picture"
+                        android:src="@drawable/dataeye4" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rellay_nose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_solid_take_picture"
+                        android:src="@drawable/bg_part" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_take_picture"
+                        android:src="@drawable/dataeye5" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rellay_nail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_solid_take_picture"
+                        android:src="@drawable/bg_part" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_take_picture"
+                        android:src="@drawable/dataeye6" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rellay_cheek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_solid_take_picture"
+                        android:src="@drawable/bg_part" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/image_view_take_picture"
+                        android:src="@drawable/dataeye7" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_overlay_activity_take_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_container_activity_take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/image_view_stroke_take_picture"
+                    android:src="@drawable/background_circle_stroke" />
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/image_view_solid_take_picture"
+                    android:src="@drawable/background_circle_solid" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/image_view_take_picture"
+                    android:src="@drawable/ic_photo_camera_white_24dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
