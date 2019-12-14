@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by YSN Studio on 8/11/18 11:00 PM
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 8/11/18 11:00 PM
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TakePictureActivity">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:id="@+id/linlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#3F51B5"
+            android:gravity="center"
+            android:text="Brand"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linlay_anna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/AnnaButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="15sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/annasui">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_anna"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Anna sui" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_benefit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/BenefitButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/benefit">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_benefit"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Benefit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_clinique"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/CliniqueButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/clinique">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_clinique"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Clinique" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_dior"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/DiorButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="20sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dior">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_dior"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dior" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_ioreal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/IorealButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ioreal">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_ioreal"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="l'oreal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_maybelline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/MaybellineButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/mayblline">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_maybelline"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Maybelline" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_nyx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/NyxButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/nyx">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_nyx"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NYX" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_pacifica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/PacificaButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="20sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pacifica">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_pacifica"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pacifica" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_revlon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/RevlonButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/revlon">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_revlon"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Revlon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_sante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/SanteButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="20sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sante">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_sante"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sante" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_stila"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/StilaButton"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="25sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/stila">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_brush"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Stila" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_overlay_activity_take_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_container_activity_take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/image_view_stroke_take_picture"
+                    android:src="@drawable/background_circle_stroke" />
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/image_view_solid_take_picture"
+                    android:src="@drawable/background_circle_solid" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/image_view_take_picture"
+                    android:src="@drawable/ic_photo_camera_white_24dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
