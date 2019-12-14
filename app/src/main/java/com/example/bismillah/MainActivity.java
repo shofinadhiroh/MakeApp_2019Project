@@ -64,15 +64,6 @@ public class MainActivity extends AppCompatActivity {
         mascara = findViewById(R.id.MascaraButton);
 
 
-        //face info 데이터 가지고 오기
-//        try {
-//            cosmetic_info = new HttpConnector().execute(url_).get();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (ExecutionException e) {
-//            e.printStackTrace();
-//        }
-
         blush.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

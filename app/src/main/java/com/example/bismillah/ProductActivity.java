@@ -59,6 +59,8 @@ public class ProductActivity extends AppCompatActivity {
         brand_data = intent.getExtras().getString("info");
         url_ = intent.getExtras().getStringArray("Url");
 
+
+        //product 갯수 구하기
         try {
             JSONArray productsinfo = new JSONArray(brand_data);
             product_num = productsinfo.length();

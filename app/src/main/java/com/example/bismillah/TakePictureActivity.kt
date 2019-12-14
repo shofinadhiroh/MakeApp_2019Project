@@ -7,6 +7,7 @@
 
 package com.example.bismillah
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.graphics.*
@@ -193,11 +194,12 @@ class TakePictureActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("WrongViewCast")
     private fun startFaceProcessor() {
         // Observe activity lifecycle to start, stop and destroy camera view based on lifecycle events
         lifecycle.addObserver(MainActivityLifecycleObserver(camera_view))
 
-        val eye = findViewById<RelativeLayout>(R.id.rellay_face);
+        val eye = findViewById<RelativeLayout>(R.id.linlay_eyeliner);
 
         eye.setOnClickListener(){
             val faceProcessor = FaceProcessor(camera_view, overlay_view)

@@ -12,14 +12,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/makeapp_launcher"
         android:label="MakeApp"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/makeapp_launcher_round"
         tools:replace="android:appComponentFactory"
         android:appComponentFactory="whateverString"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TakePictureActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,6 +32,7 @@
         <activity android:name=".BrandActivity"/>
         <activity android:name=".ProductActivity"/>
         <activity android:name=".PicturePreviewActivity" />
+        <activity android:name=".TakePictureActivity" />
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
     </application>
 
