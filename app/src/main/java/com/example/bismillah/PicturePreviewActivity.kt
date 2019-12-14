@@ -4,7 +4,6 @@ import android.app.Activity
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.TextView
 
 import com.otaliastudios.cameraview.AspectRatio
 import com.otaliastudios.cameraview.CameraUtils
@@ -25,7 +24,7 @@ class PicturePreviewActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_picture_preview)
+        setContentView(R.layout.activity_realtime_face)
         val imageView = findViewById<ImageView>(R.id.image)
 
         val delay = intent.getLongExtra("delay", 0)

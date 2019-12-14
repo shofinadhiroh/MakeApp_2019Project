@@ -15,18 +15,12 @@
     tools:context=".TakePictureActivity">
 
 
-    <com.otaliastudios.cameraview.CameraView
-        android:id="@+id/camera_view"
+    <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:keepScreenOn="true"
-        app:cameraFacing="front" />
-
-    <com.example.bismillah.OverlayView
-        android:id="@+id/overlay_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true" />
 
     <LinearLayout
         android:id="@+id/linlay"
@@ -39,9 +33,9 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#673AB7"
+            android:background="#F44336"
             android:gravity="center"
-            android:text="Part of Face"
+            android:text="Product"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
@@ -56,10 +50,8 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-
-
                 <LinearLayout
-                    android:id="@+id/linlay_brush"
+                    android:id="@+id/linlay_p1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -70,27 +62,58 @@
 
 
                     <ImageButton
-                        android:id="@+id/BrushButton"
+                        android:id="@+id/Product1"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="15sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dataeye">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_p1"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="p1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_p2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/Product2"
                         android:layout_width="63dp"
                         android:layout_height="63dp"
                         android:background="@drawable/bg_part"
                         android:padding="10sp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/brush">
+                        android:src="@drawable/dataeye">
 
 
                     </ImageButton>
 
                     <TextView
-                        android:id="@+id/text_brush"
+                        android:id="@+id/text_p2"
                         android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Brush" />
+                        android:text="p2" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/linlay_bronzer"
+                    android:id="@+id/linlay_p3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -101,209 +124,27 @@
 
 
                     <ImageButton
-                        android:id = "@+id/BronzerButton"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:src="@drawable/bronzer"
-                        android:padding="10sp"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/bg_part">
-
-
-                    </ImageButton>
-
-                    <TextView
-                        android:id="@+id/text_bronzer"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Bronzer" />
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/linlay_eyebrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent"
-                    android:layout_marginRight="8dp">
-
-
-
-                    <ImageButton
-                        android:id = "@+id/EyebrowButton"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:src="@drawable/eyebrow"
-                        android:padding="18sp"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/bg_part">
-
-
-                    </ImageButton>
-
-                    <TextView
-                        android:id="@+id/text_eyebrow"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Eyebrow" />
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/linlay_eyeshadow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent"
-                    android:layout_marginRight="8dp">
-
-
-
-                    <ImageButton
-                        android:id = "@+id/EyeshadowButton"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:src="@drawable/eyeshadow"
-                        android:padding="10sp"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/bg_part">
-
-
-                    </ImageButton>
-
-                    <TextView
-                        android:id="@+id/text_eyeshadow"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Eyeshadow" />
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/linlay_eyeliner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent"
-                    android:layout_marginRight="8dp">
-
-
-
-                    <ImageButton
-                        android:id = "@+id/EyelinerButton"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:padding="5dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/eyeliner"
-                        android:background="@drawable/bg_part">
-
-
-                    </ImageButton>
-
-                    <TextView
-                        android:id="@+id/text_eyeliner"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Eyeliner" />
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/linlay_foundation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent"
-                    android:layout_marginRight="8dp">
-
-
-
-                    <ImageButton
-                        android:id = "@+id/FoundationButton"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:src="@drawable/foundation"
-                        android:padding="10sp"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/bg_part">
-
-
-                    </ImageButton>
-
-                    <TextView
-                        android:id="@+id/text_foundation"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Foundation" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/linlay_lipliner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent"
-                    android:layout_marginRight="8dp">
-
-
-
-                    <ImageButton
-                        android:id = "@+id/LiplinerButton"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:src="@drawable/lipliner"
-                        android:padding="5sp"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/bg_part">
-
-                    </ImageButton>
-
-
-
-
-                    <TextView
-                        android:id="@+id/text_lipliner"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Lipliner" />
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/linlay_lipstick"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent"
-                    android:layout_marginRight="8dp">
-
-
-
-                    <ImageButton
-                        android:id="@+id/LipstickButton"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:padding="18sp"
-                        android:scaleType="centerCrop"
+                        android:id="@+id/Product3"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
                         android:background="@drawable/bg_part"
-                        android:src="@drawable/lipstick">
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dataeye">
+
 
                     </ImageButton>
 
-
                     <TextView
-                        android:id="@+id/text_lipstick"
+                        android:id="@+id/text_p3"
                         android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lipstick" />
+                        android:text="p3" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:id="@+id/linlay_mascara"
+                    android:id="@+id/linlay_p4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -314,27 +155,150 @@
 
 
                     <ImageButton
-                        android:id = "@+id/MascaraButton"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:src="@drawable/mascara"
+                        android:id="@+id/Product4"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
                         android:padding="10sp"
                         android:scaleType="centerCrop"
-                        android:background="@drawable/bg_part">
+                        android:src="@drawable/dataeye">
+
 
                     </ImageButton>
 
-
-
                     <TextView
-                        android:id="@+id/text_mascara"
+                        android:id="@+id/text_p4"
                         android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mascara" />
+                        android:text="p4" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/linlay_p5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/Product5"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dataeye">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_p5"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="p5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_p6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/Product6"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dataeye">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_p6"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="p6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_p7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/Product7"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dataeye">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_p7"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="p7" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlay_p8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent"
+                    android:layout_marginRight="8dp">
+
+
+
+                    <ImageButton
+                        android:id="@+id/Product8"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_part"
+                        android:padding="10sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dataeye">
+
+
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/text_p8"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="p8" />
+                </LinearLayout>
             </LinearLayout>
+
         </HorizontalScrollView>
 
         <RelativeLayout

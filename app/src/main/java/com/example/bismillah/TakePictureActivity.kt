@@ -34,7 +34,7 @@ import java.io.File
 import java.io.FileOutputStream
 
 /*
-* Second Page
+*  Realtime first Page
 *
 * */
 
@@ -197,7 +197,7 @@ class TakePictureActivity : AppCompatActivity() {
         // Observe activity lifecycle to start, stop and destroy camera view based on lifecycle events
         lifecycle.addObserver(MainActivityLifecycleObserver(camera_view))
 
-        val eye = findViewById<RelativeLayout>(R.id.rellay_face );
+        val eye = findViewById<RelativeLayout>(R.id.rellay_face);
 
         eye.setOnClickListener(){
             val faceProcessor = FaceProcessor(camera_view, overlay_view)

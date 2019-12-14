@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
     ImageButton lipliner;
     ImageButton mascara;
 
-    String cosmetic_info;
-    String part_info;
     String[] url_={"http://makeup-api.herokuapp.com/api/v1/products.json","","",""};
 
     String[] parts = {"blush"
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_realtime_face);
 
         blush = findViewById(R.id.BrushButton);
         bronzer = findViewById(R.id.BronzerButton);
@@ -65,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
         lipstick = findViewById(R.id.LipstickButton);
         mascara = findViewById(R.id.MascaraButton);
 
-        cosmetic_info = null;
-        part_info = null;
 
         //face info 데이터 가지고 오기
 //        try {
@@ -83,18 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] = "product_type=blush";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
-                Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
-                intent.putExtra("BrandData", part_info);
+                Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
@@ -106,18 +91,8 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] = "product_type=bronzer";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
 
                 Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
-                intent.putExtra("BrandData", part_info);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
@@ -128,18 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] = "product_type=eyeshadow";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
                 Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
-                intent.putExtra("BrandData", part_info);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
@@ -150,18 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] = "product_type=eyeliner";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
                 Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
-                intent.putExtra("BrandData", part_info);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
@@ -172,18 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] = "product_type=eyebrow";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
                 Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
-                intent.putExtra("BrandData", part_info);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
@@ -194,18 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] = "product_type=foundation";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
                 Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
-                intent.putExtra("BrandData", part_info);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
@@ -216,18 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] = "product_type=lipliner";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
                 Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
-                intent.putExtra("BrandData", part_info);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
@@ -238,18 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] = "product_type=lipstick";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
                 Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
-                intent.putExtra("BrandData", part_info);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
@@ -262,28 +171,11 @@ public class MainActivity extends AppCompatActivity {
 
                 url_[1] += "product_type=mascara";
 
-                //face info 데이터 가지고 오기
-                try {
-                    part_info = new HttpConnector().execute(url_).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
-
                 Intent intent = new Intent(getApplicationContext(), BrandActivity.class);
-                intent.putExtra("BrandData", part_info);
                 intent.putExtra("Url", url_);
                 startActivity(intent);
             }
         });
-
-
-
-
-
-        System.out.println(cosmetic_info);
 
 
     }

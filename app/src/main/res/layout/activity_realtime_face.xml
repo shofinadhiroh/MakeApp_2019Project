@@ -15,18 +15,12 @@
     tools:context=".TakePictureActivity">
 
 
-    <com.otaliastudios.cameraview.CameraView
-        android:id="@+id/camera_view"
+    <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:keepScreenOn="true"
-        app:cameraFacing="front" />
-
-    <com.example.bismillah.OverlayView
-        android:id="@+id/overlay_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true" />
 
     <LinearLayout
         android:id="@+id/linlay"
@@ -59,35 +53,35 @@
 
 
                 <LinearLayout
-                    android:id="@+id/linlay_brush"
-                    android:layout_width="wrap_content"
+                android:id="@+id/linlay_brush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                tools:ignore="UselessParent"
+                android:layout_marginRight="8dp">
+
+
+
+                <ImageButton
+                    android:id="@+id/BrushButton"
+                    android:layout_width="63dp"
+                    android:layout_height="63dp"
+                    android:background="@drawable/bg_part"
+                    android:padding="10sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/brush">
+
+
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/text_brush"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent"
-                    android:layout_marginRight="8dp">
-
-
-
-                    <ImageButton
-                        android:id="@+id/BrushButton"
-                        android:layout_width="63dp"
-                        android:layout_height="63dp"
-                        android:background="@drawable/bg_part"
-                        android:padding="10sp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/brush">
-
-
-                    </ImageButton>
-
-                    <TextView
-                        android:id="@+id/text_brush"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Brush" />
-                </LinearLayout>
+                    android:text="Brush" />
+            </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/linlay_bronzer"
@@ -375,20 +369,15 @@
 
             </RelativeLayout>
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button"
-                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button"
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
-                android:visibility="gone"/>
+                android:layout_marginBottom="0dp"
+                android:text="Button"
+                android:visibility="gone" />
 
         </RelativeLayout>
 

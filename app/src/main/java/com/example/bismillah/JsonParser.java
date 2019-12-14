@@ -54,18 +54,19 @@ public class JsonParser {
 
     String link;
     String imglink;
+    String name;
 
-    public String Parsing(String json)
+    public String Parsing(String json,int index)
 
     {
         String infolist = "";
-        String brand, name ,desc, price;
+        String brand,desc, price;
         JSONArray colors;
 
         try {
 
             JSONArray productArray = new JSONArray(json);
-            JSONObject productObject = productArray.getJSONObject(0);
+            JSONObject productObject = productArray.getJSONObject(index);
 
             brand = productObject.getString("brand");
             infolist += "Brand:\n  " + brand + "\n";
@@ -113,6 +114,8 @@ public class JsonParser {
     public String getImageUrl(){
         return imglink;
     }
+
+    public String getName() { return name;}
 
 
 }
