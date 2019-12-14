@@ -16,6 +16,7 @@ import android.provider.MediaStore
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.*
 import com.google.firebase.ml.vision.FirebaseVision
@@ -25,12 +26,25 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceLandmark
 import com.otaliastudios.cameraview.CameraListener
 import com.otaliastudios.cameraview.CameraUtils
+import com.otaliastudios.cameraview.CameraView
+import com.otaliastudios.cameraview.Size
 import com.theartofdev.edmodo.cropper.CropImage
 import kotlinx.android.synthetic.main.activity_take_picture.*
 import java.io.File
 import java.io.FileOutputStream
 
 class TakePictureActivity : AppCompatActivity() {
+
+    private var camera: CameraView? = null
+
+    private var mCapturingPicture: Boolean = false
+    private var mCapturingVideo: Boolean = false
+
+    // To show stuff in the callback
+    private var mCaptureNativeSize: Size? = null
+    private var mCaptureTime: Long = 0
+
+    private var controlPanel: ViewGroup? = null
 
     private val imageView by lazy { findViewById<ImageView>(R.id.camera_view)!! }
 
@@ -44,22 +58,53 @@ class TakePictureActivity : AppCompatActivity() {
         startFaceProcessor()
         camera_view.addCameraListener(object : CameraListener() {
             override fun onPictureTaken(jpeg: ByteArray?) {
-                val fileName = "${System.currentTimeMillis()}_image.jpg"
-                CameraUtils.decodeBitmap(jpeg) {
-                    val photo = File(directory, fileName)
-                    val fileOutputStream = FileOutputStream(photo)
-                    it.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream)
-                    finish()
-                }
+                mCapturingPicture = false
+                val callbackTime = System.currentTimeMillis()
+
+                // This can happen if picture was taken with a gesture.
+                if (mCaptureTime == 0L) mCaptureTime = callbackTime - 300
+                if (mCaptureNativeSize == null) mCaptureNativeSize = camera?.getPictureSize()
+
+                PicturePreviewActivity.Companion.setImage(jpeg)
+                val intent = Intent(this@TakePictureActivity, PicturePreviewActivity::class.java)
+                intent.putExtra("delay", callbackTime - mCaptureTime)
+                intent.putExtra("nativeWidth", mCaptureNativeSize?.getWidth())
+                intent.putExtra("nativeHeight", mCaptureNativeSize?.getHeight())
+                startActivity(intent)
+
+                mCaptureTime = 0
+                mCaptureNativeSize = null
             }
         })
         relative_layout_container_activity_take_picture.setOnClickListener {
-            showProgressDialog()
+            if (mCapturingPicture)
+            mCapturingPicture = true
+            mCaptureTime = System.currentTimeMillis()
+            mCaptureNativeSize = camera_view.getPictureSize()
             camera_view.capturePicture()
         }
         bottomSheetButton.setOnClickListener {
             CropImage.activity().start(this)
         }
+    }
+
+    private fun onPicture(jpeg: ByteArray) {
+        mCapturingPicture = false
+        val callbackTime = System.currentTimeMillis()
+
+        // This can happen if picture was taken with a gesture.
+        if (mCaptureTime == 0L) mCaptureTime = callbackTime - 300
+        //if (mCaptureNativeSize == null) mCaptureNativeSize = camera.getPictureSize()
+
+        PicturePreviewActivity.Companion.setImage(jpeg)
+        val intent = Intent(this@TakePictureActivity, PicturePreviewActivity::class.java)
+        intent.putExtra("delay", callbackTime - mCaptureTime)
+        //intent.putExtra("nativeWidth", mCaptureNativeSize.getWidth())
+        //intent.putExtra("nativeHeight", mCaptureNativeSize.getHeight())
+        startActivity(intent)
+
+        mCaptureTime = 0
+        mCaptureNativeSize = null
     }
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -146,7 +191,7 @@ class TakePictureActivity : AppCompatActivity() {
         // Observe activity lifecycle to start, stop and destroy camera view based on lifecycle events
         lifecycle.addObserver(MainActivityLifecycleObserver(camera_view))
 
-        val eye = findViewById<RelativeLayout>(R.id.rellay_face);
+        val eye = findViewById<RelativeLayout>(R.id.rellay_face );
 
         eye.setOnClickListener(){
             val faceProcessor = FaceProcessor(camera_view, overlay_view)
