@@ -12,6 +12,15 @@ import com.otaliastudios.cameraview.CameraUtils
 import java.lang.ref.WeakReference
 
 
+/*
+
+
+    Second Page
+
+
+
+*/
+
 class PicturePreviewActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

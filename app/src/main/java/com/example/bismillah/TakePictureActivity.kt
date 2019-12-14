@@ -33,6 +33,12 @@ import kotlinx.android.synthetic.main.activity_take_picture.*
 import java.io.File
 import java.io.FileOutputStream
 
+/*
+* Second Page
+*
+* */
+
+
 class TakePictureActivity : AppCompatActivity() {
 
     private var camera: CameraView? = null
