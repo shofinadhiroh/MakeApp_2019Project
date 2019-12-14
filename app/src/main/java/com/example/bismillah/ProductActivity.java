@@ -22,21 +22,24 @@ import java.util.concurrent.ExecutionException;
 
 public class ProductActivity extends AppCompatActivity {
 
-    ImageButton[] product;
-    TextView[] product_name;
+    ImageButton[] product = new ImageButton[8];
+    TextView[] product_name = new TextView[8];
 
     String brand_data;
-    String[] url_;
-    String[] info, link, img_link;
+    String[] url_ = new String[4];
+    String[] info = new String[8];
+    String[] link = new String[8];
+    String[] img_link = new String[8];
     int product_num;
     private Bitmap bitmap;
-    String[] name;
+    String[] name  = new String[8];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_realtime_products);
+
         product[0] = findViewById(R.id.Product1);
         product[1] = findViewById(R.id.Product2);
         product[2] = findViewById(R.id.Product3);
